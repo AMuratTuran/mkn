@@ -7,7 +7,7 @@
             <thead>
                 <tr>
                     <th>{% trans 'Subject' %}</th>
-                    <th>{% trans 'Date sent' %}</th>
+                    <th>{% trans 'Gönderilme Tarihi' %}</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +23,6 @@
         </table>
         {% include "partials/pagination.html" %}
     {% else %}
-        <p>{% trans 'No emails found' %}</p>
+        <p>{% trans 'Email bulunamadı.' %}</p>
     {% endif %}
 {% endblock tabcontent %}

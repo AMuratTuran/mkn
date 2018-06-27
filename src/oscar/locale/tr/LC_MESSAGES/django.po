@@ -5469,7 +5469,7 @@ msgstr "Sepetiniz boş"
 #: templates/oscar/basket/partials/basket_content.html:160
 #: templates/oscar/checkout/thank_you.html:317
 msgid "Continue shopping"
-msgstr ""
+msgstr "Alışverişe devam et"
 
 #: templates/oscar/basket/partials/basket_content.html:169
 msgid "Items to buy later"
@@ -5477,7 +5477,7 @@ msgstr ""
 
 #: templates/oscar/basket/partials/basket_content.html:172
 msgid "Items"
-msgstr ""
+msgstr "Ürünler"
 
 #: templates/oscar/basket/partials/basket_content.html:213
 msgid "Move to basket"
@@ -5486,7 +5486,7 @@ msgstr "Sepete taşı"
 #: templates/oscar/basket/partials/basket_quick.html:25
 #: templates/oscar/customer/order/order_detail.html:19
 msgid "Qty"
-msgstr ""
+msgstr "Miktar"
 
 #: templates/oscar/basket/partials/basket_quick.html:33
 #: templates/oscar/basket/partials/basket_quick.html:35
@@ -5557,7 +5557,7 @@ msgstr ""
 
 #: templates/oscar/catalogue/browse.html:27
 msgid "Show results for"
-msgstr ""
+msgstr "Sonuçları göster"
 
 #: templates/oscar/catalogue/browse.html:49
 msgid "Refine by"
@@ -5625,7 +5625,7 @@ msgstr "Fiyat (vergi dahil)"
 
 #: templates/oscar/catalogue/detail.html:127
 msgid "Availability"
-msgstr ""
+msgstr "Uygunluk"
 
 #: templates/oscar/catalogue/detail.html:139
 msgid "Number of reviews"
@@ -7082,7 +7082,7 @@ msgstr "SKU"
 
 #: templates/oscar/dashboard/catalogue/product_update.html:194
 msgid "Num in stock"
-msgstr ""
+msgstr "Stok Miktarı"
 
 #: templates/oscar/dashboard/catalogue/product_update.html:195
 msgid "Num allocated"

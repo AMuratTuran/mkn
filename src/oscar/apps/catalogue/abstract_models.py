@@ -349,6 +349,7 @@ class AbstractProduct(models.Model):
             "This flag indicates if this product can be used in an offer "
             "or not"))
 
+
     objects = ProductManager()
     browsable = BrowsableProductManager()
 

@@ -4,8 +4,7 @@
 {% block tabcontent %}
 
     <ul class="nav nav-tabs">
-        <li class="{% if list_type == 'inbox' %}active{% endif %}"><a href="{% url 'customer:notifications-inbox' %}">{% trans 'Inbox' %}</a></li>
-        <li class="{% if list_type == 'archive' %}active{% endif %}"><a href="{% url 'customer:notifications-archive' %}">{% trans 'Archive' context 'noun' %}</a></li>
+        <li class="{% if list_type == 'inbox' %}active{% endif %}"><a href="{% url 'customer:notifications-inbox' %}">{% trans 'Gelen Kutusu' %}</a></li>
     </ul>
 
     {% if notifications %}
@@ -42,23 +41,22 @@
                                 {% if list_type == 'inbox' %}
                                     <a class="btn btn-success btn-sm" href="#" data-behaviours="archive">{% trans 'Archive' context 'verb' %}</a>
                                 {% endif %}
-                                <a class="btn btn-danger btn-sm "href="#" data-behaviours="delete">{% trans 'Delete' %}</a>
+                                <a class="btn btn-danger btn-sm "href="#" data-behaviours="delete">{% trans 'Sil' %}</a>
                             </td>
                         </tr>
                     {% endfor %}
                 </tbody>
             </table>
-            {% trans "With selected items:" %}
+            {% trans "Seçilenler:" %}
             {% if list_type == 'inbox' %}
-                <button type="submit" class="btn btn-success" name="action" value="archive" data-loading-text="{% trans 'Archiving...' %}">{% trans "Archive" context 'verb' %}</button>
             {% endif %}
-            <button type="submit" class="btn btn-danger" name="action" value="delete" data-loading-text="{% trans 'Deleting...' %}">{% trans "Delete" %}</button>
+            <button type="submit" class="btn btn-danger" name="action" value="delete" data-loading-text="{% trans 'Siliniyor...' %}">{% trans "Sil" %}</button>
         </form>
 
         {% include "partials/pagination.html" %}
 
     {% else %}
-        <p>{% trans "There are no notifications to display." %}</p>
+        <p>{% trans "Bildirim bulunmamakta." %}</p>
     {% endif %}
 
 {% endblock tabcontent %}

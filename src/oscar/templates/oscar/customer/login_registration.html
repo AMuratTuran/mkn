@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% block title %}
-    {% trans 'Login or register' %} | {{ block.super }}
+    {% trans 'Kaydol veya giriş yap' %} | {{ block.super }}
 {% endblock %}
 
 {% block breadcrumbs %}
@@ -10,7 +10,7 @@
         <li>
             <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
         </li>
-        <li class="active">{% trans 'Login or register' %}</li>
+        <li class="active">{% trans 'Kaydol veya giriş yap' %}</li>
     </ul>
 {% endblock %}
 
@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-sm-6 login_form">
             <form id="login_form" action="{{ request.get_full_path }}" method="post" class="well" >
-                <h2>{% trans 'Log In' %}</h2>
+                <h2>{% trans 'Giriş yap' %}</h2>
                 {% csrf_token %}
                 {% include "partials/form_fields.html" with form=login_form %}
                 <p><a href="{% url 'password-reset' %}">{% trans "I've forgotten my password" %}</a></p>

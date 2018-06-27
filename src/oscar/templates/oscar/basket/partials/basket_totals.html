@@ -25,7 +25,7 @@
 
                         {% for discount in offer_discounts %}
                             <tr>
-                                <td class="basket-discount"><span class="label label-success">{% trans "Discount" %}</span> {{ discount.name }}
+                                <td class="basket-discount"><span class="label label-success">{% trans "İndirim" %}</span> {{ discount.name }}
                                     {% if discount.description %}
                                         <br/><small>{{ discount.description }}</small>
                                     {% endif %}
@@ -36,7 +36,7 @@
 
                         {% if voucher_discounts %}
                             <tr>
-                                <th colspan="2"><h3>{% trans "Vouchers" %}</h3></th>
+                                <th colspan="2"><h3>{% trans "Kupanlar" %}</h3></th>
                             </tr>
                             {% for discount in voucher_discounts %}
                                 <tr>
@@ -45,7 +45,7 @@
                                         {% if editable %}
                                             <form action="{% url 'basket:vouchers-remove' pk=discount.voucher.id %}" method="POST">
                                                 {% csrf_token %}
-                                                <input type="submit" value="{% trans 'Remove' %}" class="btn btn-sm btn-danger" />
+                                                <input type="submit" value="{% trans 'Kaldır' %}" class="btn btn-sm btn-danger" />
                                             </form>
                                         {% endif %}
                                     </td>
@@ -92,7 +92,7 @@
 
                 <tr>
                     <th colspan="2">
-                        <h3>{% trans "Shipping" %}</h3>
+                        <h3>{% trans "Kargo" %}</h3>
                         {% if shipping_methods|length > 1 and editable %}
                             <small>{% trans "Alternative shipping methods can be chosen during checkout" %}</small>
                         {% endif %}
@@ -116,7 +116,7 @@
                     {% shipping_charge_excl_discount shipping_method basket as shipping_charge_excl_discount %}
                     {# As shipping is discounted, we break it down into its original charge and a discount #}
                     <tr>
-                        <th class="total">{% trans "Shipping method" %}</th>
+                        <th class="total">{% trans "Kargo metodu" %}</th>
                         <td class="total align-right">{{ shipping_method.name }}</td>
                     </tr>
                     <tr>
@@ -215,7 +215,6 @@
                 </tr>
                 {% if not order_total.is_tax_known %}
                     <tr>
-                        <td><small>{% trans "Taxes will be added during checkout." %}</small></td>
                     </tr>
                 {% endif %}
             {% endblock %}

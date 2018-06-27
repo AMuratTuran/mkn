@@ -8,6 +8,7 @@ from django.utils.http import urlquote
 from django.utils.translation import ugettext_lazy as _
 from django.views.generic import DetailView, TemplateView
 
+from oscar.apps.catalogue.abstract_models import AbstractProduct
 from oscar.apps.catalogue.signals import product_viewed
 from oscar.core.loading import get_class, get_model
 
@@ -24,6 +25,7 @@ class ProductDetailView(DetailView):
     model = Product
     view_signal = product_viewed
     template_folder = "catalogue"
+
 
     # Whether to redirect to the URL with the right path
     enforce_paths = True

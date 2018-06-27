@@ -12,15 +12,15 @@
 {% block tabcontent %}
     <table class="table table-striped table-bordered">
         <tr>
-            <th>{% trans 'Date sent' %}</th>
+            <th>{% trans 'Gönderilme tarihi' %}</th>
             <td>{{ email.date_sent }}</td>
         </tr>
         <tr>
-            <th>{% trans 'Subject' %}</th>
+            <th>{% trans 'Konu' %}</th>
             <td>{{ email.subject }}</td>
         </tr>
         <tr>
-            <th>{% trans 'Body' %}</th>
+            <th>{% trans 'Ayrıntı' %}</th>
             <td>{{ email.body_html|safe }}</td>
         </tr>
     </table>

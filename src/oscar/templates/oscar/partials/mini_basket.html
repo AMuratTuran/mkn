@@ -1,16 +1,16 @@
 {% load currency_filters %}
 {% load i18n %}
 
-<div class="basket-mini pull-right hidden-xs">
-    <strong>{% trans "Basket total:" %}</strong>
+<div class="basket-mini pull-right hidden-xs" style="color: #FFFFFF">
+    <strong>{% trans "Basket total:"%} </strong>
     {% if request.basket.is_tax_known %}
-        {{ request.basket.total_incl_tax|currency:request.basket.currency }}
+        {{ request.basket.total_incl_tax|currency:"TRY" }}
     {% else %}
-        {{ request.basket.total_excl_tax|currency:request.basket.currency }}
+        {{ request.basket.total_excl_tax|currency:"TRY" }}
     {% endif %}
 
     <span class="btn-group">
-        <a class="btn btn-default" href="{% url 'basket:summary' %}">{% trans "View basket" %}</a>
+        <a class="btn btn-default" href="{% url 'basket:summary' %}">{% trans "Sepetim" %}</a>
         <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
             <span class="caret"></span>
         </button>

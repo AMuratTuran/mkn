@@ -5,22 +5,22 @@
     <a href="{% url 'customer:profile-view' %}">{% trans "Profile" %}</a>
 </li>
 <li{% if active_tab == 'orders' %} class="active"{% endif %}>
-    <a href="{% url 'customer:order-list' %}">{% trans "Order History" %}</a>
+    <a href="{% url 'customer:order-list' %}">{% trans "Sipariş Geçmişi" %}</a>
 </li>
 <li{% if active_tab == 'addresses' %} class="active"{% endif %}>
-    <a href="{% url 'customer:address-list' %}">{% trans "Address Book" %}</a>
+    <a href="{% url 'customer:address-list' %}">{% trans "Adreslerim" %}</a>
 </li>
 <li{% if active_tab == 'emails' %} class="active"{% endif %}>
-    <a href="{% url 'customer:email-list' %}">{% trans "Email History" %}</a>
+    <a href="{% url 'customer:email-list' %}">{% trans "Maillerim" %}</a>
 </li>
 <li{% if active_tab == 'alerts' %} class="active"{% endif %}>
-    <a href="{% url 'customer:alerts-list' %}">{% trans "Product Alerts" %}</a>
+    <a href="{% url 'customer:alerts-list' %}">{% trans "Ürün Alarmları" %}</a>
 </li>
 <li{% if active_tab == 'notifications' %} class="active"{% endif %}>
-    <a href="{% url 'customer:notifications-inbox' %}">{% trans "Notifications" %}</a>
+    <a href="{% url 'customer:notifications-inbox' %}">{% trans "Bildirimler" %}</a>
 </li>
 {% iffeature 'wishlists' %}
     <li{% if active_tab == 'wishlists' %} class="active"{% endif %}>
-        <a href="{% url 'customer:wishlists-list' %}">{% trans "Wish Lists" %}</a>
+        <a href="{% url 'customer:wishlists-list' %}">{% trans "Favorilerim" %}</a>
     </li>
 {% endiffeature %}
